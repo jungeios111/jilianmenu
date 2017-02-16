@@ -46,6 +46,12 @@
     NSLog(@"subCategoryTableView:%@",NSStringFromUIEdgeInsets(self.subCategoryTableView.contentInset));
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    NSLog(@"%s", __func__);
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if (tableView == self.categoryTableView) {
