@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ytb-yv-daT">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="kas-0c-Ofe">
+            <objects>
+                <navigationController id="Ytb-yv-daT" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NmL-mx-60K">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="V4X-OG-2ER"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aT1-oS-I6R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1418" y="118"/>
+        </scene>
+        <!--级联菜单-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XTa-P9-fFh">
+                                <color key="backgroundColor" red="0.1971453142" green="1" blue="0.1218645305" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="188" id="e8W-CA-Zxc"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cateCell" id="BUW-FE-Ch8">
+                                        <rect key="frame" x="0.0" y="92" width="188" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BUW-FE-Ch8" id="yns-Cs-rcV">
+                                            <frame key="frameInset" width="188" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="WkX-B5-hSK"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="JvS-eB-WMb"/>
+                                </connections>
+                            </tableView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="t8M-mh-wQs">
+                                <color key="backgroundColor" red="0.9907562137" green="0.32288498030000001" blue="0.98542264719999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="subCateCell" id="Pkl-KS-gHk">
+                                        <rect key="frame" x="0.0" y="28" width="187" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Pkl-KS-gHk" id="Opd-AQ-X3w">
+                                            <frame key="frameInset" width="187" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="KTy-KS-U3t"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="t8M-mh-wQs" firstAttribute="leading" secondItem="XTa-P9-fFh" secondAttribute="trailing" id="4cn-9p-QMW"/>
+                            <constraint firstItem="XTa-P9-fFh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="9tw-av-I4w"/>
+                            <constraint firstAttribute="bottom" secondItem="t8M-mh-wQs" secondAttribute="bottom" id="YsX-1K-FTD"/>
+                            <constraint firstItem="XTa-P9-fFh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fyq-71-aCv"/>
+                            <constraint firstItem="t8M-mh-wQs" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="hee-mq-VA0"/>
+                            <constraint firstAttribute="trailing" secondItem="t8M-mh-wQs" secondAttribute="trailing" id="jkW-TL-VeX"/>
+                            <constraint firstItem="t8M-mh-wQs" firstAttribute="leading" secondItem="XTa-P9-fFh" secondAttribute="trailing" id="q0V-nI-MQ2"/>
+                            <constraint firstAttribute="bottom" secondItem="XTa-P9-fFh" secondAttribute="bottom" id="qmR-su-l4C"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="级联菜单" id="jAX-bR-XNt"/>
+                    <connections>
+                        <outlet property="categoryTableView" destination="XTa-P9-fFh" id="0W9-e2-VGc"/>
+                        <outlet property="subCategoryTableView" destination="t8M-mh-wQs" id="n7k-q0-gjE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-562" y="117"/>
+        </scene>
+    </scenes>
+</document>
